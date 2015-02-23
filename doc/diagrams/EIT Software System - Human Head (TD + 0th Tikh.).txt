@@ -1,13 +1,26 @@
 title EIT Software System - Human Head (TD + 0th Tikh.)
 
-EEG System->Data Collector: Send(Raw Human V data) 
-Data Collector->Data Procesor - Time Diff: Send(Averaged Human data)
-Data Procesor - Time Diff->Data Procesor - Time Diff: Clean and prepare Human data
-Data Procesor - Time Diff->Imager - 0th Order Tikhonov: Send(Vbaseline, noise estimation)
-Imager - 0th Order Tikhonov->Imager - 0th Order Tikhonov: Reduce data to hexagonal mesh
-Imager - 0th Order Tikhonov->Imager - 0th Order Tikhonov: Reconstruct image
-Imager - 0th Order Tikhonov->Visualizer: Send(4D data)
-Visualizer->Visualizer: Create(Visualization)
-note right of Visualizer: VTK, Matlab, Quantit. 
 
+External data\n from subject->"Mesher\n:Simulation": Send(subject geometry)
+
+Mesher\n:Simulation->"Forward Solver\n:Simulation": Send(digitalized geometry)
+
+EEG System\n:Experimental->"Data Collector\n:Experimental": Send(Raw Human V data) 
+
+Data Collector\n:Experimental->Data Procesor - Time Diff: Send(Averaged V Human data)
+
+Data Procesor - Time Diff->Data Procesor - Time Diff: 
+Clean and prepare(Human data)
+
+Data Procesor - Time Diff->Imager - 0th Order Tikhonov: Send(Vbaseline, noise estimation)
+
+Forward Solver\n:Simulation->Imager - 0th Order Tikhonov: Send(Sensitivity)
+
+Imager - 0th Order Tikhonov->Imager - 0th Order Tikhonov: Reconstruct(image)
+
+Imager - 0th Order Tikhonov->Visualizer: Send(4D image data)
+
+Visualizer->Visualizer: Create(Visualization)
+
+note right of Visualizer: VTK, Matlab, Quantit. 
 

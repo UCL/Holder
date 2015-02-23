@@ -1,10 +1,26 @@
 title EIT Software System Overview
 
-EEG System->Data Collector: Send(Raw V data) 
-Data Collector->Data Procesor: Send(Averaged V data)
-Data Procesor->Data Procesor: Clean and prepare Human data
-Data Procesor->Imager: Send(Vbaseline, noise estimation)
-Imager->Imager: Reconstruct image
-Imager->Visualizer: Send(4D data)
+note over "External data\n from subject": MRI/Atlas/CT/...
+
+External data\n from subject->"Mesher\n:Simulation": Send(subject geometry)
+
+Mesher\n:Simulation->"Forward Solver\n:Simulation": Send(digitalized geometry)
+
+EEG System\n:Experimental->"Data Collector\n:Experimental": Send(Raw V data) 
+
+Data Collector\n:Experimental->"Data Procesor\n:Experimental": Send(Averaged V data)
+
+Data Procesor\n:Experimental->"Data Procesor\n:Experimental": Clean and prepare(Human data)
+
+
+Data Procesor\n:Experimental->Imager: Send(Vbaseline, noise estimation)
+
+Forward Solver\n:Simulation->Imager: Send(Sensitivity)
+
+Imager->Imager: Reconstruct(image)
+
+Imager->Visualizer: Send(4D image data)
+
 Visualizer->Visualizer: Create(Visualization)
+
 note right of Visualizer: VTK, Matlab, Quantit. 
