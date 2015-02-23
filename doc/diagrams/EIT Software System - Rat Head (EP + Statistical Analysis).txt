@@ -1,0 +1,9 @@
+title EIT Software System - Rat Head (EP + Statistical Analysis)
+
+EEG System->Data Collector: Send(Raw Rat V data) 
+Data Collector->Data Procesor - EP: Send(Averaged Rat data)
+Data Procesor - EP->Data Procesor - EP: Clean and prepare Rat data
+Data Procesor - EP->Imager - ??:Send(Vbaseline, noise estimation) 
+Imager - ??->Visualizer: Send(4D data)
+Visualizer->Visualizer: Create(Statistical Analysis)
+

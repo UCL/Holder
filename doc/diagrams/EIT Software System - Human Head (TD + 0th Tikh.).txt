@@ -1,0 +1,13 @@
+title EIT Software System - Human Head (TD + 0th Tikh.)
+
+EEG System->Data Collector: Send(Raw Human V data) 
+Data Collector->Data Procesor - Time Diff: Send(Averaged Human data)
+Data Procesor - Time Diff->Data Procesor - Time Diff: Clean and prepare Human data
+Data Procesor - Time Diff->Imager - 0th Order Tikhonov: Send(Vbaseline, noise estimation)
+Imager - 0th Order Tikhonov->Imager - 0th Order Tikhonov: Reduce data to hexagonal mesh
+Imager - 0th Order Tikhonov->Imager - 0th Order Tikhonov: Reconstruct image
+Imager - 0th Order Tikhonov->Visualizer: Send(4D data)
+Visualizer->Visualizer: Create(Visualization)
+note right of Visualizer: VTK, Matlab, Quantit. 
+
+

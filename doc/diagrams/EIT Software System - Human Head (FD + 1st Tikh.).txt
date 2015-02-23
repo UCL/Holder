@@ -1,0 +1,13 @@
+title EIT Software System - Human Head (FD + 1st Tikh.)
+
+EEG System->Data Collector: Send(Raw Human V data) 
+Data Collector->Data Procesor - Freq Diff: Send(Averaged Human data)
+Data Procesor - Freq Diff->Data Procesor - Freq Diff: Clean and prepare Human data
+Data Procesor - Freq Diff->Imager - 1st Order Tikhonov: Send(Vbaseline, noise estimation)
+Imager - 1st Order Tikhonov->Hexagonizer: Send(Data mesh, Jacobian matrix)
+Hexagonizer->Hexagonizer: Reduce(Data mesh, Jacobian matrix)
+Hexagonizer->Imager - 1st Order tikhonov: Send(Simplified data)
+Imager - 1st Order tikhonov->Imager - 1st Order tikhonov: gSVD()
+Imager - 1st Order Tikhonov->Visualizer: Send(4D data)
+Visualizer->Visualizer: Create(Visualization)
+note right of Visualizer: VTK, Matlab, Quantit. 
