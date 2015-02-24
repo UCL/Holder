@@ -9,6 +9,8 @@ The overview workflow of the EIT Software System is represented in _Figure 2_.
 
 ![Component Diagram](diagrams/EIT%20Software%20System%20Overview.png "Figure 2")
 
+---
+
 RSDT has examined the code and come up with a management plan for EIT’s software system:
 
 ###Version Control
