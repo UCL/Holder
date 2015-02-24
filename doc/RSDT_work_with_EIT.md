@@ -1,7 +1,13 @@
 #RSDT and EITT collaboration – Work plan and Progress reportAt the beginning of February 2015, a member of UCL’s RSD team started collaborating with the EIT team and will be working on their software system on a 2 days/week basis. 
 The EIT team has kindly prepared a shared folder for the RSD team containing an updated version of the different subsystems and their source code, represented in _Figure 1_.
 
+ 
+![Component Diagram](diagrams/ComponentDiagram.png "Figure 1")
+
+
 The overview workflow of the EIT Software System is represented in _Figure 2_.
+
+![Component Diagram](diagrams/EIT%20Software%20System%20Overview.png "Figure 2")
 
 RSDT has examined the code and come up with a management plan for EIT’s software system:
 
