@@ -8,7 +8,7 @@
 The next diagram represents an overview of all the components of the system, their interfaces and their authorship/management:
 
  
-![Component Diagram](diagrams/ComponentDiagram.png "Figure 1")
+![Component Diagram](diagrams/ComponentDiagram.no_authors.png "Figure 1")
 
 
 
@@ -65,4 +65,4 @@ On a longer term plan, RSDT will continue examining the existing code and meetin
 
 
 
-
+
