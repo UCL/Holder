@@ -1,4 +1,4 @@
-#RSDT and EITT collaboration – Work plan and progress reportAt the beginning of February 2015, a member of UCL’s RSD team started collaborating with the EIT team and will be working on their software system on a 2 days/week basis. 
+#RSDT and EITT collaboration – Work plan and progress reportAt the beginning of February 2015, a member of UCL’s RSD team started collaborating with the EIT team and will be working on their software system on a 2 days/week basis **(for how long?)**. 
 The EIT team has kindly prepared a shared folder for RSDT containing an updated version of the different subsystems and their source code. The overview workflow of the EIT Software System is represented in the following sequence diagram:
 
 ![Component Diagram](diagrams/EIT%20Software%20System%20Overview.png "Figure 2")
@@ -30,14 +30,17 @@ Time spent on this task depends on each of the team members’ ability to design
 This might be the most time-consuming and challenging task for RSDT. It’s difficult to come up with a time estimate without more information. The code has been reviewed, but needs to be examined in more detail in conjunction with the source code authors in order to give a good estimate. 
 Refactoring includes:
 
-* *Code  structure*:
+* **Code  structure**:
 The existing software has been created by different authors who have followed different programming methodologies. This is reflected in the heterogeneous structure of each of the system components. In the current version of the EIT software system, there is often duplication of code. For example, the CGAL mesher code for a human’s brain and a rat’s brain. Both pieces of software share most of the code, and their workflows are similar, so they need to be merged, made more modular and be parametized. This would improve readability and would make the code easier to test and debug. 
 
-* *Coding conventions*:
-indentation, variable naming, “magic numbers”, 
+* **Coding conventions**:
+In general, the source code in the shared folder doesn't follow correctly Matlab's and C++ coding conventions. This includes indentation, variable naming, use of “magic numbers”, source code filenaming (avoid things like _Obtain_Markus.m_), etc. Adopting the appropriate coding conventions would make the code more readable, easier to maintain and be understood by others. 
 
-* *Adoption of other good practises*:
-use a logging system instead of screen printouts, replace C++ structs with classes
+* **Adoption of other good practises**, for example:
+  * In the examined source code, output messages are directly printed out in the standard output for logging and debugging purposes. It is a good practise to use an appropriate **logger** that produces a meaningful and homogeneous output, like log4m for Matlab of log4c for C++.  
+  * In the C++ code there is a tendency to overuse **_struct_** definitions for very complex data structures. _struct_ is an inherited data structure from the C language, and should only be used for straight-forward data structures. There are many cases (_DataHandle_, _EllipticOperator_, etc.), that should be reviewed and converted into C++ classes.      
+  * There is no **exception management** present in the code. It would be convenient in order to make the code more reliable and avoid unexpected failure, for example when reading an input file that might not have the correct format or might be inexistent. 
+  * Avoid use of **hardcoded values** like absolute paths to files.
 
 
 ###Documentation
