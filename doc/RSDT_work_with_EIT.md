@@ -50,9 +50,6 @@ RSDT will train the team on how to do this and assist on the generation of appro
 ###Cross-platform Software Release
 Some of the components in the EIT Software System work only in Windows or only in Linux. The EIT team has indicated that components like the Mesher that can only be executed in their Windows machines at the moment, would benefit from more RAM available in their Linux stations. It would also be convenient for external teams who use EIT’s software to have the choice to build the components they use in Linux or Windows.
 
-###Collaboration with Third Parties - Black Rock?? 
-Commercialization of software? Minimum amount of time for the code to be ready to be published? Which components are they interested in?
-
 ###Work Plan
 The role of RSDT in this collaboration is to detect areas of improvement in the existing software system and mentor the EIT team on how to adopt software development good practises that will be beneficial to ensure their research software is reliable and reproductible.
 
