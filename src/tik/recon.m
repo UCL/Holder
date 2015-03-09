@@ -1,10 +1,10 @@
 % $$$ function recon3(Rat_number,EIT_serial)
 
-load('/scratch/scratch/ccearal/Jacobian_hex_neonate_noskull.mat', ...
+load('Jacobian_hex_neonate_noskull.mat', ...
      'BV0','J');
 
 %  load ('Data/dV');
- load('/scratch/scratch/ccearal/Combined_Matrix_new.mat')
+ load('Combined_Matrix_new.mat')
  
    
     BV_baseline=BV_baseline.*repmat(sign(BV0),1,size(BV_baseline,2));
@@ -79,6 +79,6 @@ load('/scratch/scratch/ccearal/Jacobian_hex_neonate_noskull.mat', ...
     
 %% Save
     Sigma=X./SD;
-    save(['/scratch/scratch/ccearal/recon_nn_1500um_JENKINS.mat'],...
+    save(['recon_nn_1500um.mat'],...
          'Sigma','cv_error','lambda','-v7.3');
      disp('All done motherfucker!');
