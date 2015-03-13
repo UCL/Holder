@@ -12,7 +12,7 @@ mkdir -p ~/workspace/git_training/my_profile
 cd ~/workspace/git_training/my_profile
 ```
 
-Just ME: split vertically screen and do:
+Split vertically screen and do:
 
 ```bash
 while :
@@ -39,7 +39,8 @@ tree -a
 ```bash
 git init
 ```
-ME: Show tree -a
+
+See output of tree -a with repository created.
 
 ```bash
 git status
@@ -47,7 +48,7 @@ git add colours.txt
 git status
 ```
 
-ME: Show tree -a and slides - what else to do now?
+Check tree -a output. Note new content created in repository. Have a look at image in slides showing staing area and think about what the next step is.
 
 ```bash
 git commit -m "This is my first commit message. How very exciting." colours.txt
@@ -230,6 +231,10 @@ You can also easily ignore files with smartgit.
 **Commit review**
 
 When we commit a change, we are just adding a new commit node to our repository (directed graph).
+
+![](.images/Commit1.jpg =250x)
+![](.images/arrow.png =70x)
+![](.images/Commit2.jpg =250x)
 
 <img src="./images/Commit1.png" style="width: 250px;"/>
 <img src="./images/arrow.png" style="width: 70px;"/>
