@@ -232,10 +232,6 @@ You can also easily ignore files with smartgit.
 
 When we commit a change, we are just adding a new commit node to our repository (directed graph).
 
-![](./images/Commit1.png = 250x250)
-![](./images/arrow.png =70px)
-![](./images/Commit2.png =250x)
-
 <img src="./images/Commit1.png" height="250px" width="250px"/>
 <img src="./images/arrow.png" width="70" />
 <img src="./images/Commit2.png" height="250px" width="250px"/>
@@ -243,9 +239,9 @@ When we commit a change, we are just adding a new commit node to our repository 
 
 Exercise:
 
-<img src="./images/Commit3.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Commit4.png" style="width: 250px;"/>
+<img src="./images/Commit3.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Commit4.png" height="250px" width="250px"/>
 
 Solution:
 
@@ -265,9 +261,9 @@ When we start mixing branches and commits, we will see how these two features co
 git branch newImage
 ```
 
-<img src="./images/Branch1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Branch2.png" style="width: 250px;"/>
+<img src="./images/Branch1.png" height="250px" width="250px" />
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Branch2.png" height="250px" width="250px"/>
 
 There, that's all there is to branching! The branch newImage now refers to commit C1
 
@@ -276,7 +272,7 @@ git commit
 ```
 
 
-<img src="./images/Branch3.png" style="width: 400px;"/>
+<img src="./images/Branch3.png" height="400px" width="400px"/>
 
 
 Oh no! The master branch moved but the newImage branch didn't! That's because we weren't "on" the new branch, which is why the asterisk (*) was on master
@@ -297,9 +293,9 @@ git commit
 
 
 
-<img src="./images/Branch4.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Branch6.png" style="width: 250px;"/>
+<img src="./images/Branch4.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Branch6.png" height="250px" width="250px"/>
 
 
 
@@ -307,7 +303,7 @@ git commit
 Exercise: Create a new branch called "bugFix" and move to that branch.
 
 
-<img src="./images/Branch7.png" style="width: 400px;"/>
+<img src="./images/Branch7.png" height="400px" width="400px"/>
 
 Solution 1:
  
@@ -425,9 +421,9 @@ git merge bugFix
 ```
 
 
-<img src="./images/Merge1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Merge2.png" style="width: 250px;"/>
+<img src="./images/Merge1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Merge2.png" height="250px" width="250px"/>
 
 
 Woah! See that? First of all, master now points to a commit that has two parents. If you follow the arrows up the commit tree from master, you will hit every commit along the way to the root. This means that master contains all the work in the repository now.
@@ -438,7 +434,7 @@ git checkout bugFix
 git merge master
 ```
 
-<img src="./images/Merge3.png" style="width: 400px;"/>
+<img src="./images/Merge3.png" height="400px" width="400px"/>
 
 Since bugFix was an ancestor of master, git didn't have to do any work; it simply just moved bugFix to the same commit master was attached to.
 
@@ -453,9 +449,9 @@ Merge bugFix into master
 ```
 
 
-<img src="./images/Merge4.png" style="width: 200px;"/>
-<img src="./images/arrow.png" style="width: 100px;"/>
-<img src="./images/Merge5.png" style="width: 200px;"/>
+<img src="./images/Merge4.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Merge5.png" height="250px" width="250px"/>
 
 
 
@@ -507,9 +503,9 @@ git checkout master^
 ```
 
 
-<img src="./images/Refs1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs2.png" style="width: 250px;"/>
+<img src="./images/Refs1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs2.png" height="250px" width="250px"/>
 
 You can also reference HEAD as a relative ref. Let's use that a couple of times to move upwards in the commit tree
 
@@ -520,9 +516,9 @@ git checkout HEAD^
 git checkout HEAD^
 ```
 
-<img src="./images/Refs3.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs4.png" style="width: 250px;"/>
+<img src="./images/Refs3.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs4.png" height="250px" width="250px"/>
 
 
 Say you want to move a lot of levels up in the commit tree. It might be tedious to type ^ several times, so Git also has the tilde (~) operator.
@@ -533,9 +529,9 @@ The tilde operator (optionally) takes in a trailing number that specifies the nu
 git checkout HEAD~4
 ```
 
-<img src="./images/Refs5.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs6.png" style="width: 250px;"/>
+<img src="./images/Refs5.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs6.png" height="250px" width="250px"/>
 
 One of the most common ways I use relative refs is to move branches around. You can directly reassign a branch to a commit with the -f option. So something like:
 
@@ -546,9 +542,9 @@ git branch -f master HEAD~3
 Moves (by force) the master branch to three parents behind HEAD.
 
 
-<img src="./images/Refs7.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs8.png" style="width: 250px;"/>
+<img src="./images/Refs7.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs8.png" height="250px" width="250px"/>
 
 
 Exercise:
@@ -557,9 +553,9 @@ Exercise:
 Move references to match the goals in pink.
 ```
 
-<img src="./images/Refs9.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs10.png" style="width: 250px;"/>
+<img src="./images/Refs9.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs10.png" height="250px" width="250px"/>
 
 
 Solution:
@@ -570,9 +566,9 @@ git checkout HEAD^
 ```
 
 
-<img src="./images/Refs11.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Refs12.png" style="width: 250px;"/>
+<img src="./images/Refs11.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Refs12.png" height="250px" width="250px"/>
 
 Solution:
 
@@ -599,9 +595,9 @@ Let's see what that looks like:
 git reset HEAD~1
 ```
 
-<img src="./images/Undo1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Undo2.png" style="width: 250px;"/>
+<img src="./images/Undo1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Undo2.png" height="250px" width="250px"/>
 
 Git simply moved the master branch reference back to C1; now our local. 
 
@@ -614,9 +610,9 @@ git revert HEAD
 ```
 
 
-<img src="./images/Undo3.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Undo4.png" style="width: 250px;">
+<img src="./images/Undo3.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Undo4.png" height="250px" width="250px">
 
 Weird, a new commit plopped down below the commit we wanted to reverse. That's because this new commit ```C2'``` introduces changes -- it just happens to introduce changes that exactly reverses the commit of ```C2```.
 
@@ -628,9 +624,9 @@ Exercise:
 Reverse last two commits.
 ```
 
-<img src="./images/Undo5.png" style="width: 200px;"/>
-<img src="./images/arrow.png" style="width: 100px;"/>
-<img src="./images/Undo6.png" style="width: 200px;"/>
+<img src="./images/Undo5.png" height="250px" width="350px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Undo6.png" height="250px" width="200px"/>
 
 Solution:
 
@@ -657,9 +653,9 @@ Here's a repository where we have some work in branch side that we want to copy 
 git cherry-pick C2 C4
 ```
 
-<img src="./images/Cherry-pick1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Cherry-pick2.png" style="width: 250px;"/>
+<img src="./images/Cherry-pick1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Cherry-pick2.png" height="250px" width="250px"/>
  
  
 Exercise: 
@@ -668,9 +664,9 @@ Copy some work from the three branches shown into master.
 ```
 
 
-<img src="./images/Cherry-pick5.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Cherry-pick6.png" style="width: 250px;"/>
+<img src="./images/Cherry-pick5.png" height="250px" width="350px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Cherry-pick6.png" height="250px" width="250px"/>
 
 
 Solution:
@@ -690,9 +686,9 @@ All of these debugging / print statements are in their own commits. Finally I tr
 Only problem is that I now need to get my bugFix back into the master branch. If I simply fast-forwarded master, then master would get all my debug statements which is undesirable. There has to be another way...
 ```
 
-<img src="./images/Cherry-pick3.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Cherry-pick4.png" style="width: 250px;"/>
+<img src="./images/Cherry-pick3.png" height="250px" width="150px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/Cherry-pick4.png" height="250px" width="200px"/>
 
 
 Solution
@@ -716,9 +712,9 @@ Let's try making a tag at C1 which is our version 1 prototype:
 git tag v1 C1
 ```
 
-<img src="./images/tags1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/tags2.png" style="width: 250px;"/>
+<img src="./images/tags1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/tags2.png" height="250px" width="250px"/>
 
 
 We named the tag v1 and referenced the commit C1 explicitly. If you leave the commit off, git will just use whatever HEAD is at.
@@ -729,9 +725,9 @@ Exercise:
 Create the tags in the goal visualization and then check v1 out. 
 ```
 
-<img src="./images/tags3.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/tags4.png" style="width: 250px;"/>
+<img src="./images/tags3.png" height="250px" width="350px"/>
+<img src="./images/arrow.png" width="70px"/>
+<img src="./images/tags4.png" height="250px" width="250px"/>
 
 Solution:
 
@@ -749,23 +745,38 @@ Git describe can help you get your bearings after you've moved many commits back
 
 Git describe takes the form of:
 
-git describe <ref>
+```
+git describe --tags <ref>
+```
 
 Where <ref> is anything git can resolve into a commit. If you don't specify a ref, git just uses where you're checked out right now (HEAD).
 
 The output of the command looks like:
 
+```
 <tag>_<numCommits>_g<hash>
+```
 
 Where tag is the closest ancestor tag in history, numCommits is how many commits away that tag is, and <hash> is the hash of the commit being described.
 
 The command git describe master would output:
 
+```
 v1\_2\_gC2
+```
 
 Whereas git describe side would output:
 
+```
 v2\_1\_gC4
+```
 
+Exercise: Set up a repository that looks like the following graph. Look at different outputs of 
 
-<img src="./images/tags4.png" style="width: 500px;"/>
+```
+git describe --tags 
+```
+
+moving from one branch to another.
+
+<img src="./images/tags4.png" height="450px" width="450px"/>
