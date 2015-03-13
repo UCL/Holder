@@ -232,7 +232,7 @@ You can also easily ignore files with smartgit.
 
 When we commit a change, we are just adding a new commit node to our repository (directed graph).
 
-![](./images/Commit1.png =250x)
+![](./images/Commit1.png)
 ![](./images/arrow.png =70x)
 ![](./images/Commit2.png =250x)
 
