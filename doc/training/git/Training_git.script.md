@@ -232,8 +232,8 @@ You can also easily ignore files with smartgit.
 
 When we commit a change, we are just adding a new commit node to our repository (directed graph).
 
-![](./images/Commit1.png)
-![](./images/arrow.png =70x)
+![](./images/Commit1.png = 250x250)
+![](./images/arrow.png =70px)
 ![](./images/Commit2.png =250x)
 
 <img src="./images/Commit1.png" style="width: 250px;"/>
