@@ -236,9 +236,9 @@ When we commit a change, we are just adding a new commit node to our repository 
 ![](./images/arrow.png =70px)
 ![](./images/Commit2.png =250x)
 
-<img src="./images/Commit1.png" style="width: 250px;"/>
-<img src="./images/arrow.png" style="width: 70px;"/>
-<img src="./images/Commit2.png" style="width: 250px;"/>
+<img src="./images/Commit1.png" height="250px" width="250px"/>
+<img src="./images/arrow.png" width="70" />
+<img src="./images/Commit2.png" height="250px" width="250px"/>
 
 
 Exercise:
